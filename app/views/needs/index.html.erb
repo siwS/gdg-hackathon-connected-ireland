@@ -1,30 +1,42 @@
-<h2>Needs</h2>
+<div class="container">
+  <h2>Here are some requests.</h2>
 
-<% @needs.each do |need| %>
-  <div class="need">
-    <div>
-      <div class="description">
-        <p><%= need.description %></p>
-      </div>
-      <div class="taken">
-        <%= button_to "Take", {}, :disabled => need.is_taken? %>
-      </div>
-    </div>
-    <div class="time">
-      <div>
-        <p>
-          Needs <span class="duration"><%= need.duration %></span> minutes
-          between <span class="datetime_range"> <%= need.datetime_range_start %> </span>
-          and <span class="datetime_range"><%= need.datetime_range_end %></span>
-        </p>
-      </div>
-      <div class="categories">
-        <p>
-          Categories: <%= need.categories%>
-        </p>
-      </div>
-    </div>
+  <table class="table table-striped">
+    <thead>Register for opportunities to volunteer that match your interests, availability and location!</thead>
+
+    <tbody>
+      <% @needs.each do |need| %>
+        <tr class="need">
+          <td>
+            <div class="description">
+              <p><%= need.description %></p>
+            </div>
+          </td>
+          <td class="time">
+            <div>
+              <p>
+                Needs <span class="duration"><%= need.duration %></span> minutes
+                between <span class="datetime_range"> <%= need.datetime_range_start %> </span>
+                and <span class="datetime_range"><%= need.datetime_range_end %></span>
+              </p>
+            </div>
+            <div class="categories">
+              <p>
+                Categories: <%= need.categories%>
+              </p>
+            </div>
+          </td>
+          <td>
+            <div class="taken">
+              <%= button_to "Take", {}, :disabled => need.is_taken? %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 
-  </div>
-<% end %>
+
+
