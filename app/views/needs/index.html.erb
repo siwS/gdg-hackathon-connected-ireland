@@ -1,1 +1,30 @@
 <h2>Needs</h2>
+
+<% @needs.each do |need| %>
+  <div class="need">
+    <div>
+      <div class="description">
+        <p><%= need.description %></p>
+      </div>
+      <div class="taken">
+        <%= button_to "Take", {}, :disabled => need.is_taken? %>
+      </div>
+    </div>
+    <div class="time">
+      <div>
+        <p>
+          Needs <span class="duration"><%= need.duration %></span> minutes
+          between <span class="datetime_range"> <%= need.datetime_range_start %> </span>
+          and <span class="datetime_range"><%= need.datetime_range_end %></span>
+        </p>
+      </div>
+      <div class="categories">
+        <p>
+          Categories: <%= need.categories%>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+<% end %>
