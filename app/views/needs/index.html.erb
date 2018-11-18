@@ -3,7 +3,12 @@
 
   <table class="table table-striped">
     <thead>Register for opportunities to volunteer that match your interests, availability and location!</thead>
-
+      <tr>
+        <th>Task asked...</th>
+        <th>Approximate Duration</th>
+        <th>Keywords</th>
+        <th>Available</th>
+      </tr>
     <tbody>
       <% @needs.each do |need| %>
         <tr class="need">
@@ -20,6 +25,8 @@
                 and <span class="datetime_range"><%= need.datetime_range_end %></span>
               </p>
             </div>
+          </td>
+          <td>
             <div class="categories">
               <p>
                 Categories: <%= need.categories%>
@@ -28,7 +35,6 @@
           </td>
           <td>
             <div class="taken">
-              <%= need.is_taken%>
               <%= button_to "Take it!", {action: "take", id: need.id}, method: :put , :disabled => need.is_taken?
               %>
             </div>
