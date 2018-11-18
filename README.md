@@ -11,9 +11,10 @@ To run, you need rails-5 and postgresql db
 4. rails server
 
 
-Setup Heroku:
+To deploy to Heroku:
 
-git remote heroku to: https://github.com/siwS/gdg-hackathon-connected-ireland 
+set git remote heroku to: https://github.com/siwS/gdg-hackathon-connected-ireland
+
 git push heroku
 
 
