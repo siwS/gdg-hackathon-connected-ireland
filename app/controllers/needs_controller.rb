@@ -1,7 +1,7 @@
 class NeedsController < ApplicationController
 
   def index
-    @needs = Need.all
+    @needs = Need.order :created_at
   end
 
   def new

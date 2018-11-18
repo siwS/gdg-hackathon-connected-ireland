@@ -28,7 +28,6 @@
           </td>
           <td>
             <div class="taken">
-              <%= need.is_taken%>
               <%= button_to "Take it!", {action: "take", id: need.id}, method: :put , :disabled => need.is_taken?
               %>
             </div>
