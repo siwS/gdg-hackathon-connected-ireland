@@ -1,6 +1,18 @@
+<div class="jumbotron">
+  <a type="button" class="btn btn-lg btn-default" href="><span class="glyphicon glyphicon-flash"></span> Register</a>
+  <a type="button" class="btn btn-lg btn-primary" href=""><span class="glyphicon glyphicon-download"></span> Login</a>
+  <div class="text-center">
+    <div class="container">
+      <a href="/" class="lang-logo">
+        <img src="<%= asset_path('volundeer.png') %>" height="80" width="80">
+      </a>
+      <h2>Volundeering</h2>
+      <p>How can we help you? Please fill in the form below.</p>
+    </div>
+  </div>
+</div>
 
 <div class="container">
-  <h2>How can we help you? Please fill in the form below.</h2>
   <br>
     <%= form_for @need,  url: { action: "create" }, :html => {:class => "form-horizontal center"} do |need| %>
       <div class="form-group">
