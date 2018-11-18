@@ -11,7 +11,7 @@
   <div class="centered">
     <%= image_tag("help.png", :alt => "ask help") %>
     <p>
-      <%= link_to "I need some help!", controller:'needs', action:'new', class: 'welcome_page_url' %>
+      <%= link_to "I need some help!", { controller:'needs', action:'new' }, class: 'welcome_page_url' %>
     </p>
   </div>
 </div>
