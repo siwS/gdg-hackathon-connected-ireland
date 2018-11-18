@@ -14,4 +14,11 @@ class NeedsController < ApplicationController
     redirect_to '/needs'
   end
 
+  def take
+    need = Need.find(params[:id])
+    need.is_taken = true
+    need.save!
+    redirect_to '/needs'
+  end
+
 end
