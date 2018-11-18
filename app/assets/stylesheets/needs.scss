@@ -1,4 +1,8 @@
 // Place all the styles related to the needs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-@import 'bootstrap'
+@import 'bootstrap';
+
+html body {
+  background-color: rgba(238,246,208,1.00);
+}
