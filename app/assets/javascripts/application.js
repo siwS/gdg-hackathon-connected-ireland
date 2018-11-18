@@ -13,4 +13,10 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
+//= require jquery
+//= require materialize-sprockets
+//= require materialize/extras/nouislider
+//= require materialize-form
+//= require datatables
+//= require init
 //= require_tree .
