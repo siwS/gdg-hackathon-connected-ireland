@@ -20,8 +20,6 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
-  username: sofia
-  password: 12345
 
 development:
   <<: *default
