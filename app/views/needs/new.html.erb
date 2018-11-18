@@ -1,0 +1,9 @@
+<h2>How can we help you? Please fill in the form below.</h2>
+
+<%= form_for @need, url: {action: "create"}, html: {class: "need_form"} do |need| %>
+  I need help with  <%= need.text_field :description%>
+  for <%= need.number_field :duration %> minutes
+  between <%= need.datetime_local_field :datetime_range_start %>
+  and <%= need.datetime_local_field :datetime_range_end %>.
+  <%= need.submit "Submit" %>
+<% end %>
