@@ -2,3 +2,21 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<div class="split left">
+  <div class="centered">
+    <%= image_tag("raise_hand.png", :alt => "happy woman") %>
+    <p>
+      <%= link_to "I want to volunteer!", needs_path, class: 'welcome_page_url' %>
+    </p>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <%= image_tag("help.png", :alt => "ask help") %>
+    <p>
+      <%= link_to "I need some help!", needs_path, class: 'welcome_page_url' %>
+    </p>
+  </div>
+</div>
