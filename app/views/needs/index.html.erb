@@ -1,8 +1,7 @@
 <div class="container">
-  <h2>Here are some requests.</h2>
-
   <table class="table table-striped">
-    <thead>Register for opportunities to volunteer that match your interests, availability and location!</thead>
+    <h2>Register for opportunities to volunteer that match your interests, availability and location!</h2>
+    <br>
       <tr>
         <th>Task asked...</th>
         <th>Approximate Duration</th>
@@ -20,7 +19,7 @@
           <td class="time">
             <div>
               <p>
-                Needs <span class="duration"><%= need.duration %></span> minutes
+                <span class="duration"><%= need.duration %></span> minutes
                 between <span class="datetime_range"> <%= need.datetime_range_start %> </span>
                 and <span class="datetime_range"><%= need.datetime_range_end %></span>
               </p>
@@ -29,7 +28,7 @@
           <td>
             <div class="categories">
               <p>
-                Categories: <%= need.categories%>
+                <%= need.categories%>
               </p>
             </div>
           </td>

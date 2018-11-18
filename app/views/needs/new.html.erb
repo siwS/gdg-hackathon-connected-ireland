@@ -1,29 +1,32 @@
-<h2>How can we help you? Please fill in the form below.</h2>
 
-<%= form_for @need,  url: {action: "create"}, :html => {:class => "form-horizontal center"} do |need| %>
-  <div class="form-group">
-    <%= need.label :description, "I need help with", class: "col-md-4 control-label" %>
-    <div class="col-md-8">
-      <%= need.text_field :description, class: "form-control", :placeholder => "task..." %>
-    </div>
-  </div>
-  <div class="form-group">
-    <%= need.label :duration, "for approximately", class: "col-md-4 control-label" %>
-    <div class="col-md-8">
-      <%= need.number_field :duration, class: "form-control", :placeholder => "minutes..." %>
-    </div>
-  </div>
+<div class="container">
+  <h2>How can we help you? Please fill in the form below.</h2>
+  <br>
+    <%= form_for @need,  url: { action: "create" }, :html => {:class => "form-horizontal center"} do |need| %>
+      <div class="form-group">
+        I need help with...
+        <div class="col-md-8">
+          <%= need.text_field :description, class: "form-control", :placeholder => "task..." %>
+        </div>
+      </div>
+      <div class="form-group">
+        For approximately...
+        <div class="col-md-8">
+          <%= need.number_field :duration, class: "form-control", :placeholder => "minutes..." %>
+        </div>
+      </div>
 
-  <div class="form-group">
-    <%= need.label :comments, "Between:", class: "col-md-4 control-label" %>
-    <div class="col-md-8">
-      <%= need.datetime_local_field :datetime_range_start, class: "form-control" %>
-    </div>
-    <div class="col-md-8">
-      <%= need.datetime_local_field :datetime_range_start, class: "form-control" %>
-    </div>
-    <br />
-  </div>
+      <div class="form-group">
+        Between...
+        <div class="col-md-8">
+          <%= need.datetime_local_field :datetime_range_start, class: "form-control" %>
+        </div>
+        <div class="col-md-8">
+          <%= need.datetime_local_field :datetime_range_start, class: "form-control" %>
+        </div>
+        <br />
+      </div>
 
-  <%= need.submit "Submit", class: "btn btn-default btn-primary" %>
-<% end %>
+      <%= need.submit "Submit", class: "btn btn-default btn-primary" %>
+    <% end %>
+</div>
